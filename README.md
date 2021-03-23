@@ -9,5 +9,3 @@ This program goal is when you wrongly type the single letter, you can edit in pu
 
 ![Example of singleletter](https://github.com/denefc/SpellChecker-with-Swing/blob/master/gifs/defaultGif.gif)
 
-<h3>Other Features<h3/>
-  <h6>File operations</h6>
