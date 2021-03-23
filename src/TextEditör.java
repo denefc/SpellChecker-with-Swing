@@ -30,7 +30,7 @@ public class TextEditör extends JFrame implements ActionListener {
     public void newFile(){
         //textareamızın boş olup olmamasına göre kaydetme işlemi yapıyoruz
         if (!textArea.getText().equals("")){
-            int cevap=JOptionPane.showConfirmDialog(rootPane,"Şimdiki çalışmanızı kaydetmek ister misiniz");
+            int cevap=JOptionPane.showConfirmDialog(rootPane,"Would you want to save?");
             if (cevap==0){
                 save();
             }else if (cevap==1){

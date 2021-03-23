@@ -21,24 +21,24 @@ public class TextArea extends JTextArea {
         }
     }
     public void search(){
-        String search=JOptionPane.showInputDialog("Arayacağınız kelimeyi giriniz");
+        String search=JOptionPane.showInputDialog("Please type the word to search ");
         //aranacak kelimenin text'imin içindeki indexini buluyorum
         int where=this.getText().indexOf(search);
         if (where==-1){
-            JOptionPane.showMessageDialog(null,"Aradığınız kelime bulunamadı");
+            JOptionPane.showMessageDialog(null,"Can't find !");
         }else //Jtextarea'nın hazır select methoduyla kelimemi belirginleştirmek için seçiyorum
             this.select(where,where+search.length());
     }
     public void replace(){
-        String search=JOptionPane.showInputDialog("Değiştirmek istediğiniz kelimeyi giriniz");
+        String search=JOptionPane.showInputDialog("Please type the word to change");
         //aranacak kelimenin text'imin içindeki indexini buluyorum
         int where=this.getText().indexOf(search);
         if (where==-1){
-            JOptionPane.showMessageDialog(null,"Değiştirmek istediğiniz kelime bulunamadı");
+            JOptionPane.showMessageDialog(null,"Can't find !");
         }else{
             //Jtextarea'nın hazır select methoduyla kelimemi belirginleştirmek için seçiyorum
             this.select(where,where+search.length());
-            String replaceWith=JOptionPane.showInputDialog("Yeni kelimeyi giriniz");
+            String replaceWith=JOptionPane.showInputDialog("Please type the new word");
             this.replaceRange(replaceWith,where,where+search.length());
         }
     }

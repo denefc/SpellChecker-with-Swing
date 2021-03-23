@@ -6,21 +6,21 @@ public class Menu extends JMenuBar {
     JMenuItem newOption,openOption,saveOption,searchOption,editOption,undoOption,replaceOption;
 
     Menu(JFrame frame){
-        fileMenu =new JMenu("Dosya");
-        editMenu=new JMenu("Düzenle");
+        fileMenu =new JMenu("File");
+        editMenu=new JMenu("Edit");
         this.add(fileMenu);
         this.add(editMenu);
         frame.setJMenuBar(this);
     }
     public void createMenu(){
         //Dosya ve düzenle menülerimizin içlerindeki seçenekleri oluşturma
-        newOption=new JMenuItem("Yeni");
-        openOption = new JMenuItem("Aç");
-        saveOption = new JMenuItem("Kaydet");
-        searchOption = new JMenuItem("Bul");
-        editOption=new JMenuItem("KontrolEt Düzenle");
-        undoOption=new JMenuItem("Geri Al");
-        replaceOption=new JMenuItem("Değiştir");
+        newOption=new JMenuItem("New");
+        openOption = new JMenuItem("Open");
+        saveOption = new JMenuItem("Save");
+        searchOption = new JMenuItem("Find");
+        editOption=new JMenuItem("Control&Edit");
+        undoOption=new JMenuItem("Undo");
+        replaceOption=new JMenuItem("Change");
     }
     public void addMenuItem(){
         fileMenu.add(newOption);
