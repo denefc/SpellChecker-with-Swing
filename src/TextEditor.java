@@ -5,13 +5,13 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class TextEditör extends JFrame implements ActionListener {
+public class TextEditor extends JFrame implements ActionListener {
     String dosyaAdi=null;
     Menu menu;
     TextArea textArea;
     KeyWords readWords;
     //frame'imizin close butonunun davranışını,ekranın ortasında açılmasını, size'ını ayarlıyoruz
-    TextEditör(){
+    TextEditor(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500,500);
         this.setLocationRelativeTo(null);
@@ -34,12 +34,12 @@ public class TextEditör extends JFrame implements ActionListener {
             if (cevap==0){
                 save();
             }else if (cevap==1){
-                dosyaAdi="yeni.txt";
+                dosyaAdi="new.txt";
                 setTitle(dosyaAdi);
                 textArea.setText(null);
             }
         }else{
-            dosyaAdi="yeni.txt";
+            dosyaAdi="new.txt";
             setTitle(dosyaAdi);
             textArea.setText(null);
         }
@@ -54,14 +54,14 @@ public class TextEditör extends JFrame implements ActionListener {
             dosyaAdi=file.getName();
             setTitle(dosyaAdi);
             //dosyayımızı okuyup textimizi yazdırma işlemi
-            Scanner ınFile=null;
+            Scanner inFile;
             try{
-                ınFile=new Scanner(file);
+                inFile=new Scanner(file);
                 if (file.isFile()){
                     setTitle(fileChooser.getSelectedFile().getName());
-                    while (ınFile.hasNextLine()){
-                        String satır=ınFile.nextLine()+"\n";
-                        textArea.append(satır);
+                    while (inFile.hasNextLine()){
+                        String satir=inFile.nextLine()+"\n";
+                        textArea.append(satir);
                     }
                 }
             }catch (FileNotFoundException e) {
@@ -90,7 +90,7 @@ public class TextEditör extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
-        new TextEditör();
+        new TextEditor();
     }
 
     @Override

@@ -21,11 +21,11 @@ public class TextArea extends JTextArea {
         }
     }
     public void search(){
-        String search=JOptionPane.showInputDialog("Please type the word to search ");
+        String search=JOptionPane.showInputDialog("Please type the word to search");
         //aranacak kelimenin text'imin içindeki indexini buluyorum
         int where=this.getText().indexOf(search);
         if (where==-1){
-            JOptionPane.showMessageDialog(null,"Can't find !");
+            JOptionPane.showMessageDialog(null,"Can't find!");
         }else //Jtextarea'nın hazır select methoduyla kelimemi belirginleştirmek için seçiyorum
             this.select(where,where+search.length());
     }
@@ -34,7 +34,7 @@ public class TextArea extends JTextArea {
         //aranacak kelimenin text'imin içindeki indexini buluyorum
         int where=this.getText().indexOf(search);
         if (where==-1){
-            JOptionPane.showMessageDialog(null,"Can't find !");
+            JOptionPane.showMessageDialog(null,"Can't find!");
         }else{
             //Jtextarea'nın hazır select methoduyla kelimemi belirginleştirmek için seçiyorum
             this.select(where,where+search.length());

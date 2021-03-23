@@ -20,7 +20,7 @@ public class Menu extends JMenuBar {
         searchOption = new JMenuItem("Find");
         editOption=new JMenuItem("Control&Edit");
         undoOption=new JMenuItem("Undo");
-        replaceOption=new JMenuItem("Change");
+        replaceOption=new JMenuItem("Change ");
     }
     public void addMenuItem(){
         fileMenu.add(newOption);
